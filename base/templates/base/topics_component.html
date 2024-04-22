@@ -4,11 +4,19 @@
           </div>
           <ul class="topics__list">
             <li>
-              <a href="{% url 'home' %}" class="active">All <span>{{topics.count}}</span></a>
+              {% if q == '' %}
+              <a href="{% url 'home' %}" class="topic active">All <span>{{topics.count}}</span></a>
+              {% else %}
+              <a href="{% url 'home' %}" class="topic">All <span>{{topics.count}}</span></a>
+              {% endif %}
             </li>
             {% for topic in topics %}
             <li>
-              <a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}} <span>{{topic.room_set.all.count}}</span></a>
+              {% if q == topic.name %}
+              <a href="{% url 'home' %}?q={{topic.name}}" class="topic active">{{topic.name}} <span>{{topic.room_set.all.count}}</span></a>
+              {% else %}
+              <a href="{% url 'home' %}?q={{topic.name}}" class="topic">{{topic.name}} <span>{{topic.room_set.all.count}}</span></a>
+              {% endif %}
             </li>
             {% endfor %}
           </ul>

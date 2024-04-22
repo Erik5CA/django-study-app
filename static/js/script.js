@@ -46,12 +46,21 @@
 
 const dropdownMenu = document.querySelector(".dropdown-menu");
 const dropdownButton = document.querySelector(".dropdown-button");
+const topics = document.querySelectorAll(".topic");
+
+// console.log(topics);
 
 if (dropdownButton) {
   dropdownButton.addEventListener("click", () => {
     dropdownMenu.classList.toggle("show");
   });
 }
+
+topics.forEach((topic) => {
+  topic.addEventListener("click", () => {
+    dropdownMenu.classList.add("active");
+  });
+});
 
 // Upload Image
 const photoInput = document.querySelector("#avatar");
@@ -66,4 +75,5 @@ if (photoInput)
 
 // Scroll to Bottom
 const conversationThread = document.querySelector(".room__box");
-if (conversationThread) conversationThread.scrollTop = conversationThread.scrollHeight;
+if (conversationThread)
+  conversationThread.scrollTop = conversationThread.scrollHeight;

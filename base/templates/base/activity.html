@@ -1,8 +1,8 @@
 {% extends "main.html" %} {% block content %}
 
 <main class="layout">
-  <div class="container">
-    <div class="layout__box">
+  <div class="container center">
+    <div class="layout__box act">
       <div class="layout__boxHeader">
         <div class="layout__boxTitle">
           <a href="{% url 'home' %}">
@@ -25,7 +25,7 @@
 
       <div class="activities-page layout__body">
         {% for message in room_messages %}
-          <div class="activities__box">
+          <div class="activities__box act">
             <div class="activities__boxHeader roomListRoom__header">
               <a href="{% url 'user-profile' message.user.id %}" class="roomListRoom__author">
                 <div class="avatar avatar--small">
