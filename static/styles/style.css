@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
-  --color-main: #11e658;
+  --color-main: #20bb54;
   --color-main-light: #e1f6fb;
   --color-dark: #255e38;
   --color-dark-medium: #132119;
   --color-dark-light: #428a66;
   --color-light: #e5e5e5;
   --color-gray: #f4f3f3;
-  --color-light-gray: #749090;
+  --color-light-gray: #b7c5c5;
   --color-bg: #141414;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
@@ -711,7 +711,7 @@ a {
 }
 
 .roomListRoom__content a:hover {
-  color: var(--color-main);
+  color: var(--color-main-light);
 }
 
 .roomListRoom__meta {
