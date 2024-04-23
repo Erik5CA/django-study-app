@@ -29,7 +29,8 @@
             <div class="activities__boxHeader roomListRoom__header">
               <a href="{% url 'user-profile' message.user.id %}" class="roomListRoom__author">
                 <div class="avatar avatar--small">
-                  <img src="{{message.user.avatar.url}}" />
+                  {% comment %} <img src="{{message.user.avatar.url}}" /> {% endcomment %}
+                  <img src="https://api.dicebear.com/8.x/bottts-neutral/svg?seed={{message.user.username}}&" />
                 </div>
                 <p>
                   @{{message.user}}

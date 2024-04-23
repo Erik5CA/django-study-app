@@ -82,7 +82,8 @@
               class="room__author"
             >
               <div class="avatar avatar--small">
-                <img src="{{room.host.avatar.url}}" />
+                {% comment %} <img src="{{room.host.avatar.url}}" /> {% endcomment %}
+                <img src="https://api.dicebear.com/8.x/bottts-neutral/svg?seed={{room.host.username}}" />
               </div>
               <span>@{{room.host.username}}</span>
             </a>
@@ -108,8 +109,11 @@
                     class="thread__authorInfo"
                   >
                     <div class="avatar avatar--small">
-                      <img
+                      {% comment %} <img
                         src="{{message.user.avatar.url}}"
+                      /> {% endcomment %}
+                      <img
+                        src="https://api.dicebear.com/8.x/bottts-neutral/svg?seed={{message.user.username}}"
                       />
                     </div>
                     <span>@{{message.user.username}}</span>
@@ -162,7 +166,8 @@
         {% for user in participants %}
         <a href="{% url 'user-profile' user.id %}" class="participant">
           <div class="avatar avatar--medium">
-            <img src="{{user.avatar.url}}" />
+            {% comment %} <img src="{{user.avatar.url}}" /> {% endcomment %}
+            <img src="https://api.dicebear.com/8.x/bottts-neutral/svg?seed={{user.username}}" />
           </div>
           <p>
             {{user.username}}
